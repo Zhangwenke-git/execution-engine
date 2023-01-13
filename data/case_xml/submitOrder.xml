@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection>
+    <case ID="0000">
+        <case type="int">11</case>
+        <classname type="bool">True</classname>
+        <description type="str">现券XBOND限价订单提交</description>
+        <module type="float">32.2101</module>
+        <testdata type="list">[{&quot;scenario&quot;: &quot;主代从-买入-不分仓-T+1&quot;, &quot;instnCd&quot;: 100035, &quot;trdngAcntCd&quot;:
+            &quot;100035&quot;, &quot;traTlCd&quot;: 180210, &quot;bndsNm&quot;: &quot;债券180210&quot;, &quot;dir&quot;:
+            true, &quot;netPrc&quot;: 105, &quot;instnNm&quot;: &quot;中信证券&quot;, &quot;trdrCd&quot;: &quot;6274&quot;,
+            &quot;volumn&quot;: 100000000, &quot;validator&quot;: {&quot;key1&quot;: 200, &quot;key2&quot;: &quot;TT&quot;},
+            &quot;prcoess&quot;: &quot;TBS-DP-CSS:grep '%s' /home/tbs/app/tbs-dp-css/logs/css-debug.log:0&quot;, &quot;database&quot;:
+            &quot;订单信息表&quot;}, {&quot;scenario&quot;: &quot;限价订单-卖出-不分仓-T+0&quot;, &quot;instnCd&quot;: &quot;100035&quot;,
+            &quot;trdngAcntCd&quot;: &quot;100035&quot;, &quot;traTlCd&quot;: &quot;140210&quot;, &quot;bndsNm&quot;:
+            &quot;债券140210&quot;, &quot;dir&quot;: &quot;S&quot;, &quot;netPrc&quot;: &quot;102&quot;, &quot;instnNm&quot;:
+            &quot;中信证券&quot;, &quot;trdrCd&quot;: &quot;6270&quot;, &quot;volumn&quot;: &quot;200000000&quot;, &quot;validator&quot;:
+            &quot;ordrCd&quot;, &quot;prcoess&quot;: &quot;TBS-DP-CSS:grep '%s'
+            /home/tbs/app/tbs-dp-css/logs/css-debug.log:1&quot;, &quot;database&quot;: &quot;订单信息表&quot;}, {&quot;scenario&quot;:
+            &quot;弹性订单-买入-不分仓-T+0&quot;, &quot;instnCd&quot;: &quot;401352&quot;, &quot;trdngAcntCd&quot;: &quot;401352&quot;,
+            &quot;traTlCd&quot;: &quot;170020&quot;, &quot;bndsNm&quot;: &quot;债券170020&quot;, &quot;dir&quot;: &quot;B&quot;,
+            &quot;netPrc&quot;: &quot;100&quot;, &quot;instnNm&quot;: &quot;阳光资管&quot;, &quot;trdrCd&quot;: &quot;30086&quot;,
+            &quot;volumn&quot;: &quot;50000000&quot;, &quot;validator&quot;: &quot;ordrCd&quot;, &quot;prcoess&quot;:
+            &quot;TBS-DP-CSS:grep '%s' /home/tbs/app/tbs-dp-css/logs/css-debug.log:2&quot;, &quot;database&quot;: &quot;订单信息表&quot;},
+            {&quot;scenario&quot;: &quot;限价订单-买入-分仓-T+1&quot;, &quot;instnCd&quot;: &quot;100003&quot;, &quot;trdngAcntCd&quot;:
+            100003, &quot;traTlCd&quot;: 170011, &quot;bndsNm&quot;: &quot;债券170011&quot;, &quot;dir&quot;: &quot;B&quot;,
+            &quot;netPrc&quot;: 100, &quot;instnNm&quot;: &quot;农业银行&quot;, &quot;trdrCd&quot;: &quot;yedan&quot;,
+            &quot;volumn&quot;: &quot;80000000&quot;, &quot;validator&quot;: &quot;ordrCd&quot;, &quot;prcoess&quot;:
+            &quot;TBS-DP-CSS:grep '%s' /home/tbs/app/tbs-dp-css/logs/css-debug.log:3&quot;, &quot;database&quot;: &quot;订单信息表&quot;}]
+        </testdata>
+        <title type="dict">{&quot;key1&quot;: 200, &quot;key2&quot;: &quot;TT&quot;}</title>
+        <comments><![CDATA[This is a remark,comments or description!]]>    </comments>
+    </case>
+    <case ID="0001">
+        <case type="str">irs_paramiko_cbt</case>
+        <classname type="str">衍生品订单提交</classname>
+        <description type="str">衍生品利率互换实时承接限价订单提交</description>
+        <module type="str">XSWAP_PARAMIKO_CBT</module>
+        <testdata type="list">[{&quot;scenario&quot;: &quot;主代从-买入-不分仓-T+1&quot;, &quot;instnCd&quot;: &quot;100035&quot;,
+            &quot;trdngAcntCd&quot;: &quot;100035&quot;, &quot;contract&quot;: &quot;FR007_1Y&quot;, &quot;contractNm&quot;:
+            &quot;FR007_1Y&quot;, &quot;dir&quot;: &quot;B&quot;, &quot;price&quot;: &quot;105.221&quot;, &quot;instnNm&quot;:
+            &quot;中信证券&quot;, &quot;trdCd&quot;: &quot;6274&quot;, &quot;volumn&quot;: &quot;100000000&quot;, &quot;validator&quot;:
+            &quot;200&quot;}, {&quot;scenario&quot;: &quot;限价订单-卖出-不分仓-T+0&quot;, &quot;instnCd&quot;: &quot;100035&quot;,
+            &quot;trdngAcntCd&quot;: &quot;100035&quot;, &quot;contract&quot;: &quot;FR007_2Y&quot;, &quot;contractNm&quot;:
+            &quot;FR007_2Y&quot;, &quot;dir&quot;: &quot;S&quot;, &quot;price&quot;: &quot;105.222&quot;, &quot;instnNm&quot;:
+            &quot;中信证券&quot;, &quot;trdCd&quot;: &quot;6270&quot;, &quot;volumn&quot;: &quot;200000000&quot;, &quot;validator&quot;:
+            &quot;200&quot;}, {&quot;scenario&quot;: &quot;弹性订单-买入-不分仓-T+0&quot;, &quot;instnCd&quot;: &quot;401352&quot;,
+            &quot;trdngAcntCd&quot;: &quot;401352&quot;, &quot;contract&quot;: &quot;FR007_3Y&quot;, &quot;contractNm&quot;:
+            &quot;FR007_3Y&quot;, &quot;dir&quot;: &quot;B&quot;, &quot;price&quot;: &quot;105.223&quot;, &quot;instnNm&quot;:
+            &quot;阳光资管&quot;, &quot;trdCd&quot;: &quot;30086&quot;, &quot;volumn&quot;: &quot;50000000&quot;, &quot;validator&quot;:
+            &quot;200&quot;}, {&quot;scenario&quot;: &quot;限价订单-买入-分仓-T+1&quot;, &quot;instnCd&quot;: &quot;100003&quot;,
+            &quot;trdngAcntCd&quot;: &quot;100003&quot;, &quot;contract&quot;: &quot;FR007_4Y&quot;, &quot;contractNm&quot;:
+            &quot;FR007_4Y&quot;, &quot;dir&quot;: &quot;B&quot;, &quot;price&quot;: &quot;105.224&quot;, &quot;instnNm&quot;:
+            &quot;农业银行&quot;, &quot;trdCd&quot;: &quot;yedan&quot;, &quot;volumn&quot;: &quot;80000000&quot;, &quot;validator&quot;:
+            &quot;200&quot;}]
+        </testdata>
+        <title type="str">限价订单</title>
+        <comments><![CDATA[This is a remark,comments or description!]]>    </comments>
+    </case>
+</collection>

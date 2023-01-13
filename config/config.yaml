@@ -1,0 +1,49 @@
+# 用于标识自身节点的身份，告诉自身的执行引擎是否出现故障
+local.host.ip : 127.0.0.1
+
+# 应急执行用例接口所使用的http端口
+server.port : 5000
+
+# redis相关配置
+redis.host : 192.168.246.128
+redis.password :
+redis.port : 6379
+redis.db : 5
+celery.result.backend.db : 1
+
+# ftp相关配置
+ftp.ip : 192.168.246.128
+ftp.port : 21
+ftp.username : ftpuser
+ftp.password : aaaa1111!
+
+#MQ配置
+mq.host : 192.168.246.128
+mq.port : 5672
+mq.user : admin
+mq.password : aaaa1111!
+# 部署时需要新建virtual_host
+mq.virtual_host : report
+mq.exchange : report_builder
+# 接收请求的队列
+mq.request.queue : report_processor_request
+# 返回处理成功与否的队列
+mq.reply.queue : report_processor_reply
+mq.pytest.result.reply.routing.key : pytest.result.reply
+mq.pytest.exec.report.routing.key : pytest.exec.report
+logger.level : INFO
+terminal.level : INFO
+# ANT样式报告类型
+report.flag : AntReport
+# report在FTP服务器上存放的目录
+report.remote.dir : /home/volume/incoming
+# 每日定时清除日志，小时
+clean.logs.job.hour : 6
+# 每日定时清除日志，分
+clean.logs.job.minute : 0
+# 清除测试的module文件的间隔时间，单位秒
+clean.module.job.timedelta : 600
+# 清除测试的测试报告文件的间隔时间，单位秒
+clean.report.job.timedelta : 600
+# 心跳的间隔时间，单位秒
+heart.beats.job.timedelta : 900

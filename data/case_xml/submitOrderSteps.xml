@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection>
+	<scenario scenario_id="0001">
+		<scenerio type="str">登录</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;emergency&quot;, &quot;description&quot;: &quot;点击应急登录&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;backup&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;username&quot;, &quot;description&quot;: &quot;输入用户名&quot;, &quot;method&quot;: &quot;id&quot;, &quot;value&quot;: &quot;userCode&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;password&quot;, &quot;description&quot;: &quot;输入用户密码&quot;, &quot;method&quot;: &quot;id&quot;, &quot;value&quot;: &quot;Pswd&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;login&quot;, &quot;description&quot;: &quot;点击登录&quot;, &quot;method&quot;: &quot;id&quot;, &quot;value&quot;: &quot;EmergencyLogin&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;newTab&quot;, &quot;description&quot;: &quot;打开新TAB&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;addIcon&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;closeHome&quot;, &quot;description&quot;: &quot;关闭首页&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='首页']||//span[@title='首页']/parent::div[@class='tabName']/following-sibling::div[@class='tabnRemove']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;checktag&quot;, &quot;description&quot;: &quot;检查点&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@class='addIcon']&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;alertMessage&quot;, &quot;description&quot;: &quot;用户名密码错误&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='alertMessage']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;alerBtn&quot;, &quot;description&quot;: &quot;确认&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[@id='alertButton']&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;tab1&quot;, &quot;description&quot;: &quot;点击tab1&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='Tab1']&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;emergencyBtn&quot;, &quot;description&quot;: &quot;应急登录&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//cut-cp-user-login/div/div[2]/div[1]/div[1]/div[1]/div/span/i&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;skipAll&quot;, &quot;description&quot;: &quot;跳过全部&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='close-all-btn']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0002">
+		<scenerio type="str">提交ODM订单</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;openMyorder&quot;, &quot;description&quot;: &quot;打开我的订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@class='addIcon']||//*[@title='功能列表']||//li[contains(text(),\&quot;我的订单\&quot;)]||//span[@class='title' and text()='我的订单']||//span[@title='嵌入']&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;quoteBtn&quot;, &quot;description&quot;: &quot;报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotebtn']/i[contains(@title,\&quot;我要报价\&quot;)]&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;quoteTypeXbond&quot;, &quot;description&quot;: &quot;选择XBOND报价方式&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='X-Bond']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;orderTypeGeneral&quot;, &quot;description&quot;: &quot;选择普通订单类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='限价']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;oderTypeFlexible&quot;, &quot;description&quot;: &quot;选择弹性订单类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='弹性']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;oderTypeSZC&quot;, &quot;description&quot;: &quot;选择市转撤订单类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='市转撤']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;oderTypeSZX&quot;, &quot;description&quot;: &quot;选择市转限订单类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='市转限']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;allcYes&quot;, &quot;description&quot;: &quot;选择分仓&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='是']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;allcNot&quot;, &quot;description&quot;: &quot;选择不分仓&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='detail' and text()='否']/preceding-sibling::div/div[@class='radiobox-insert']&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;direction&quot;, &quot;description&quot;: &quot;选择方向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='dir']/div/span[contains(text(),'%s')]&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;partyInput&quot;, &quot;description&quot;: &quot;输入本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;本方\&quot;)]/following-sibling::input[1]||//li[@title='%s']/div&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;bondcodeInput&quot;, &quot;description&quot;: &quot;输入债券&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;代码\&quot;)]/following-sibling::input[1]||//div[@class='codeCss' and text()='%s']&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;speedClick&quot;, &quot;description&quot;: &quot;下拉清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'清算速度')]/following-sibling::button||//li[@title='+%s']&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;priceInput&quot;, &quot;description&quot;: &quot;输入净价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;净价(元)\&quot;)]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;volumeInput&quot;, &quot;description&quot;: &quot;输入券面总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;券面总额(手)\&quot;)]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;submitBtn&quot;, &quot;description&quot;: &quot;提交订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='提交']&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;operationBtn&quot;, &quot;description&quot;: &quot;操作订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='%s']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;quoteClose&quot;, &quot;description&quot;: &quot;关闭报价窗口&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='head_close']&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;submitSuccess&quot;, &quot;description&quot;: &quot;检查是够提交成功&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='successTip']&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;lpriceInput&quot;, &quot;description&quot;: &quot;左方输入价格&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[1]/descendant::label[contains(text(),'净价(元)')]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;rpriceInput&quot;, &quot;description&quot;: &quot;右方输入价格&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[2]/descendant::label[contains(text(),'净价(元)')]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0022">{&quot;title&quot;: &quot;lvolume&quot;, &quot;description&quot;: &quot;左方券面总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[1]/descendant::label[contains(text(),'券面总额(手)')]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0023">{&quot;title&quot;: &quot;rvolume&quot;, &quot;description&quot;: &quot;右方券面总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[2]/descendant::label[contains(text(),'券面总额(手)')]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0024">{&quot;title&quot;: &quot;lspeedClick&quot;, &quot;description&quot;: &quot;左方下拉清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[1]/descendant::span[contains(text(),'清算速度')]/following-sibling::button&quot;}</step>
+			<step step_id="0025">{&quot;title&quot;: &quot;lspeedSelect&quot;, &quot;description&quot;: &quot;左方选择清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[1]/descendant::li[@title='+1' and @value='2']&quot;}</step>
+			<step step_id="0026">{&quot;title&quot;: &quot;rspeedClick&quot;, &quot;description&quot;: &quot;右方下拉清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[2]/descendant::span[contains(text(),'清算速度')]/following-sibling::button&quot;}</step>
+			<step step_id="0027">{&quot;title&quot;: &quot;rspeedSelect&quot;, &quot;description&quot;: &quot;右方选择清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='both-new dir-all']/div[2]/descendant::li[@title='+1' and @value='2']&quot;}</step>
+			<step step_id="0028">{&quot;title&quot;: &quot;cbtmarket&quot;, &quot;description&quot;: &quot;现券市场&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='债券市场']&quot;}</step>
+			<step step_id="0029">{&quot;title&quot;: &quot;cbt&quot;, &quot;description&quot;: &quot;现券买卖&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='现券买卖']&quot;}</step>
+			<step step_id="0030">{&quot;title&quot;: &quot;closeWhite&quot;, &quot;description&quot;: &quot;关闭报价面板&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='head_close']/i&quot;}</step>
+			<step step_id="0031">{&quot;title&quot;: &quot;ttm&quot;, &quot;description&quot;: &quot;代偿期&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotation']/div[1]/div[2]&quot;}</step>
+			<step step_id="0032">{&quot;title&quot;: &quot;guzhi&quot;, &quot;description&quot;: &quot;估值&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotation']/div[2]/div[2]&quot;}</step>
+			<step step_id="0033">{&quot;title&quot;: &quot;zhuti&quot;, &quot;description&quot;: &quot;主体/债项&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotation']/div[3]/div[2]&quot;}</step>
+			<step step_id="0034">{&quot;title&quot;: &quot;stlmntDt&quot;, &quot;description&quot;: &quot;结算日&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[text()='结算日']/following-sibling::input&quot;}</step>
+			<step step_id="0035">{&quot;title&quot;: &quot;yldToMrty&quot;, &quot;description&quot;: &quot;到期收益率&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'到期收益率')]/preceding-sibling::input&quot;}</step>
+			<step step_id="0036">{&quot;title&quot;: &quot;more&quot;, &quot;description&quot;: &quot;展开更多&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='more-logo']/descendant::button[@type='button']&quot;}</step>
+			<step step_id="0037">{&quot;title&quot;: &quot;acrdIntrst&quot;, &quot;description&quot;: &quot;应计利息&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='应计利息']/following-sibling::div/span&quot;}</step>
+			<step step_id="0038">{&quot;title&quot;: &quot;allPrice&quot;, &quot;description&quot;: &quot;全价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='全价']/following-sibling::div/span&quot;}</step>
+			<step step_id="0039">{&quot;title&quot;: &quot;dlAmnt&quot;, &quot;description&quot;: &quot;交易金额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='交易金额']/following-sibling::div/span&quot;}</step>
+			<step step_id="0040">{&quot;title&quot;: &quot;totlAcrdIntrst&quot;, &quot;description&quot;: &quot;应计利息总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='应计利息总额']/following-sibling::div/span&quot;}</step>
+			<step step_id="0041">{&quot;title&quot;: &quot;stlmntAmnt&quot;, &quot;description&quot;: &quot;结算金额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='结算金额']/following-sibling::div/span&quot;}</step>
+			<step step_id="0042">{&quot;title&quot;: &quot;bndsNm&quot;, &quot;description&quot;: &quot;债券名称&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'名称')]/following-sibling::input&quot;}</step>
+			<step step_id="0043">{&quot;title&quot;: &quot;flxblSpread&quot;, &quot;description&quot;: &quot;弹性价差&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'弹性价差(BP)')]/preceding-sibling::input&quot;}</step>
+			<step step_id="0044">{&quot;title&quot;: &quot;flxblNetPrc&quot;, &quot;description&quot;: &quot;弹性净价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'弹性价差(BP)')]/preceding-sibling::input||//div[@class='tx-bp']/div[1]/span[2]\n&quot;}</step>
+			<step step_id="0045">{&quot;title&quot;: &quot;flxblYldToMrty&quot;, &quot;description&quot;: &quot;弹性到期&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'弹性价差(BP)')]/preceding-sibling::input||//div[@class='tx-bp']/div[2]/span[2]&quot;}</step>
+			<step step_id="0046">{&quot;title&quot;: &quot;errorMessage&quot;, &quot;description&quot;: &quot;错误提示&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='message']/div[@class='message-error']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0003">
+		<scenerio type="str">订单管理</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;newTab&quot;, &quot;description&quot;: &quot;打开新TAB&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;addIcon&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;tab1&quot;, &quot;description&quot;: &quot;点击tab1&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='Tab1']&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;closeTab1&quot;, &quot;description&quot;: &quot;关闭tab1&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='Tab1']||//span[@title='Tab1']/parent::div[@class='tabName']/following-sibling::div[@class='tabnRemove']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;closeHome&quot;, &quot;description&quot;: &quot;关闭首页&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='首页']||//span[@title='首页']/parent::div[@class='tabName']/following-sibling::div[@class='tabnRemove']&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭我的订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='我的订单']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;functionList&quot;, &quot;description&quot;: &quot;打开功能列表&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;openMyOrder&quot;, &quot;description&quot;: &quot;打开我的订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),\&quot;我的订单\&quot;)]&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;unfoldMyOrder&quot;, &quot;description&quot;: &quot;放大我的订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='我的订单']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;scrollContainer&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;scroll&quot;, &quot;description&quot;: &quot;滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;status&quot;, &quot;description&quot;: &quot;有效状态&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@row-index='0']/*/*/*/span[@class='text']&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;singleSelect&quot;, &quot;description&quot;: &quot;单个勾选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@row-index='0']/div[1]/span&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;selectAll&quot;, &quot;description&quot;: &quot;全选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='ag-header-select-all']/span[2]/span&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;selectPart&quot;, &quot;description&quot;: &quot;部分选择&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='ag-header-select-all']/span[3]/span&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;freezeAll&quot;, &quot;description&quot;: &quot;一键冻结&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='一键冻结']&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;freeze&quot;, &quot;description&quot;: &quot;冻结&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='冻结']&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;revoke&quot;, &quot;description&quot;: &quot;撤销&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='撤销']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;active&quot;, &quot;description&quot;: &quot;激活&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='激活']&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;setOCO&quot;, &quot;description&quot;: &quot;设置OCO&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='设置OCO']&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;setIfdone&quot;, &quot;description&quot;: &quot;设置Ifdone&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[contains(text(),'设置If')]&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;ifdoneConfirm&quot;, &quot;description&quot;: &quot;确认提交Ifdone&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='btn-group']/button[text()='提交']&quot;}</step>
+			<step step_id="0022">{&quot;title&quot;: &quot;ifdoneCancell&quot;, &quot;description&quot;: &quot;确认取消Ifdone&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='取消If Done']&quot;}</step>
+			<step step_id="0023">{&quot;title&quot;: &quot;filterGeneral&quot;, &quot;description&quot;: &quot;限价类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='限价']&quot;}</step>
+			<step step_id="0024">{&quot;title&quot;: &quot;filterFlexible&quot;, &quot;description&quot;: &quot;弹性类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='弹性']&quot;}</step>
+			<step step_id="0025">{&quot;title&quot;: &quot;filterSZX&quot;, &quot;description&quot;: &quot;市转限类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='市转限']&quot;}</step>
+			<step step_id="0026">{&quot;title&quot;: &quot;filterOCO&quot;, &quot;description&quot;: &quot;OCO类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='OCO']&quot;}</step>
+			<step step_id="0027">{&quot;title&quot;: &quot;filterIFDone&quot;, &quot;description&quot;: &quot;IF-Done类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='If Done']&quot;}</step>
+			<step step_id="0028">{&quot;title&quot;: &quot;filterBuy&quot;, &quot;description&quot;: &quot;方向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='买入']&quot;}</step>
+			<step step_id="0029">{&quot;title&quot;: &quot;filterSell&quot;, &quot;description&quot;: &quot;卖出方向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='卖出']&quot;}</step>
+			<step step_id="0030">{&quot;title&quot;: &quot;codeFilter&quot;, &quot;description&quot;: &quot;债券筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']||//li[@title='%s']&quot;}</step>
+			<step step_id="0031">{&quot;title&quot;: &quot;filterOrderType&quot;, &quot;description&quot;: &quot;订单类型筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='%s']&quot;}</step>
+			<step step_id="0032">{&quot;title&quot;: &quot;filterDir&quot;, &quot;description&quot;: &quot;方向筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='%s']&quot;}</step>
+			<step step_id="0033">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;我的订单面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0034">{&quot;title&quot;: &quot;selectBox&quot;, &quot;description&quot;: &quot;勾选订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='ag-selection-checkbox']/span[2]&quot;}</step>
+			<step step_id="0035">{&quot;title&quot;: &quot;import&quot;, &quot;description&quot;: &quot;导入订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='导入']&quot;}</step>
+			<step step_id="0036">{&quot;title&quot;: &quot;submit&quot;, &quot;description&quot;: &quot;提交&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='提交']&quot;}</step>
+			<step step_id="0037">{&quot;title&quot;: &quot;importError&quot;, &quot;description&quot;: &quot;导入错误&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='import-error-cell error']&quot;}</step>
+			<step step_id="0038">{&quot;title&quot;: &quot;closeImportPanel&quot;, &quot;description&quot;: &quot;关闭导入页面&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='我的订单导入']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0039">{&quot;title&quot;: &quot;clickStatus&quot;, &quot;description&quot;: &quot;点击状态&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='text' and text()='%s']&quot;}</step>
+			<step step_id="0040">{&quot;title&quot;: &quot;direction&quot;, &quot;description&quot;: &quot;方向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@ng-reflect-klass='dir']/div/span[@class='active']&quot;}</step>
+			<step step_id="0041">{&quot;title&quot;: &quot;party&quot;, &quot;description&quot;: &quot;本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;本方\&quot;)]/following-sibling::input[1]&quot;}</step>
+			<step step_id="0042">{&quot;title&quot;: &quot;bondcode&quot;, &quot;description&quot;: &quot;债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;代码\&quot;)]/following-sibling::input[1]&quot;}</step>
+			<step step_id="0043">{&quot;title&quot;: &quot;ttm&quot;, &quot;description&quot;: &quot;代偿期&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotation']/div[1]/div[2]&quot;}</step>
+			<step step_id="0044">{&quot;title&quot;: &quot;guzhi&quot;, &quot;description&quot;: &quot;估值&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotation']/div[2]/div[2]&quot;}</step>
+			<step step_id="0045">{&quot;title&quot;: &quot;zhuti&quot;, &quot;description&quot;: &quot;主体/债项&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotation']/div[3]/div[2]&quot;}</step>
+			<step step_id="0046">{&quot;title&quot;: &quot;stlmntDt&quot;, &quot;description&quot;: &quot;结算日&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[text()='结算日']/following-sibling::input&quot;}</step>
+			<step step_id="0047">{&quot;title&quot;: &quot;yldToMrty&quot;, &quot;description&quot;: &quot;到期收益率&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'到期收益率')]/preceding-sibling::input&quot;}</step>
+			<step step_id="0048">{&quot;title&quot;: &quot;acrdIntrst&quot;, &quot;description&quot;: &quot;应计利息&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='应计利息']/following-sibling::div/span&quot;}</step>
+			<step step_id="0049">{&quot;title&quot;: &quot;allPrice&quot;, &quot;description&quot;: &quot;全价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='全价']/following-sibling::div/span&quot;}</step>
+			<step step_id="0050">{&quot;title&quot;: &quot;dlAmnt&quot;, &quot;description&quot;: &quot;交易金额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='交易金额']/following-sibling::div/span&quot;}</step>
+			<step step_id="0051">{&quot;title&quot;: &quot;totlAcrdIntrst&quot;, &quot;description&quot;: &quot;应计利息总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='应计利息总额']/following-sibling::div/span&quot;}</step>
+			<step step_id="0052">{&quot;title&quot;: &quot;stlmntAmnt&quot;, &quot;description&quot;: &quot;结算金额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='结算金额']/following-sibling::div/span&quot;}</step>
+			<step step_id="0053">{&quot;title&quot;: &quot;bndsNm&quot;, &quot;description&quot;: &quot;债券名称&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),'名称')]/following-sibling::input&quot;}</step>
+			<step step_id="0054">{&quot;title&quot;: &quot;cbt&quot;, &quot;description&quot;: &quot;现券买卖&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='现券买卖']&quot;}</step>
+			<step step_id="0055">{&quot;title&quot;: &quot;priceInput&quot;, &quot;description&quot;: &quot;输入净价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;净价(元)\&quot;)]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0056">{&quot;title&quot;: &quot;volumeInput&quot;, &quot;description&quot;: &quot;输入券面总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;券面总额(手)\&quot;)]/preceding-sibling::input[1]&quot;}</step>
+			<step step_id="0057">{&quot;title&quot;: &quot;dirTag&quot;, &quot;description&quot;: &quot;dir&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='dir' and text()='%s']&quot;}</step>
+			<step step_id="0058">{&quot;title&quot;: &quot;dirSelect&quot;, &quot;description&quot;: &quot;选择方向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='dir']//select&quot;}</step>
+			<step step_id="0059">{&quot;title&quot;: &quot;submitBtn&quot;, &quot;description&quot;: &quot;提交订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='提交']&quot;}</step>
+			<step step_id="0060">{&quot;title&quot;: &quot;more&quot;, &quot;description&quot;: &quot;展开更多&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='more-logo']/descendant::button[@type='button']&quot;}</step>
+			<step step_id="0061">{&quot;title&quot;: &quot;bondCd&quot;, &quot;description&quot;: &quot;修改债券&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='traTlCd' and @role='gridcell']||//div[@col-id='traTlCd' and @role='gridcell']/div/input&quot;}</step>
+			<step step_id="0062">{&quot;title&quot;: &quot;price&quot;, &quot;description&quot;: &quot;修改价格&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='netPrc' and @role='gridcell']||//div[@col-id='netPrc' and @role='gridcell']/div/input&quot;}</step>
+			<step step_id="0063">{&quot;title&quot;: &quot;title&quot;, &quot;description&quot;: &quot;我的订单导入&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='我的订单导入']&quot;}</step>
+			<step step_id="0064">{&quot;title&quot;: &quot;closeWhite&quot;, &quot;description&quot;: &quot;关闭报价面板&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='head_close']/i&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0004">
+		<scenerio type="str">X-Bond报价</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;functionList&quot;, &quot;description&quot;: &quot;打开功能列表&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;openXbond&quot;, &quot;description&quot;: &quot;打开XBOND&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),'X-Bond报价')]&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;unfoldXbond&quot;, &quot;description&quot;: &quot;放大XBOND&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='X-Bond报价']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;closeHome&quot;, &quot;description&quot;: &quot;关闭首页&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='首页']||//span[@title='首页']/parent::div[@class='tabName']/following-sibling::div[@class='tabnRemove']&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;inputCode&quot;, &quot;description&quot;: &quot;筛选区输入债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;chooseCode&quot;, &quot;description&quot;: &quot;点击匹配结果&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']/following-sibling::div/ul/li[2]&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;expandDepth&quot;, &quot;description&quot;: &quot;展开深度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='%s']/parent::span/parent::div[@col-id='traTlCd']/preceding-sibling::div/preceding-sibling::div//div[@class='quote-expand-cell']/i&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;depthNum&quot;, &quot;description&quot;: &quot;显示深度档位&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quote-expand-cell']/sub&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;price&quot;, &quot;description&quot;: &quot;双击价格展开小白屏&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@tabindex='-1']/span/span[text()='%s']&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;buyprice&quot;, &quot;description&quot;: &quot;双击价格展开小白屏&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@tabindex='-1' and @col-id='buyNetPrc']/span/span&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;sellprice&quot;, &quot;description&quot;: &quot;双击价格展开小白屏&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@tabindex='-1' and @col-id='sellNetPrc']/span/span&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;checkPointOne&quot;, &quot;description&quot;: &quot;检查是否打开小白屏&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='littleBut']/button[1]/span&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;inputParty&quot;, &quot;description&quot;: &quot;输入本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;本方\&quot;)]/following-sibling::input[1]&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;selectParty&quot;, &quot;description&quot;: &quot;匹配本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;本方\&quot;)]/following-sibling::div[1]/div[1]/ul/li[2]&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;operationBtn&quot;, &quot;description&quot;: &quot;操作订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='%s']&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;submitBtn&quot;, &quot;description&quot;: &quot;提交订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='提交']&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;submitSuccess&quot;, &quot;description&quot;: &quot;检查是够提交成功&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='successTip']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭XBOND行情窗口&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='X-Bond报价']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;scrollContainer&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;scroll&quot;, &quot;description&quot;: &quot;滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;X-Bond行情面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0022">{&quot;title&quot;: &quot;speedNm&quot;, &quot;description&quot;: &quot;清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'+%s')]&quot;}</step>
+			<step step_id="0023">{&quot;title&quot;: &quot;errorMessage&quot;, &quot;description&quot;: &quot;错误提示&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='message']/div[@class='message-error']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0005">
+		<scenerio type="str">交易分仓</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;closeWidget&quot;, &quot;description&quot;: &quot;关闭当前widget&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='关闭']&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;newTab&quot;, &quot;description&quot;: &quot;打开新TAB&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;addIcon&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;functionList&quot;, &quot;description&quot;: &quot;打开功能列表&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;openPost&quot;, &quot;description&quot;: &quot;打开交易分仓&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),'交易分仓')]&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;unfoldPost&quot;, &quot;description&quot;: &quot;放大交易分仓&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='交易分仓']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;embed&quot;, &quot;description&quot;: &quot;嵌入&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='嵌入']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;inputCode&quot;, &quot;description&quot;: &quot;筛选区输入债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']||//li[@title='%s']&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;partyPost&quot;, &quot;description&quot;: &quot;点击待本方分仓&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='待本方分仓']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;xbondTag&quot;, &quot;description&quot;: &quot;点击X-Bond&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='X-Bond']&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;refresh&quot;, &quot;description&quot;: &quot;刷新结果&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@class='refreshBtn']&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;tradingNum&quot;, &quot;description&quot;: &quot;点击成交意向编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='trdngIntntnNo' and text()='%s']&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;test&quot;, &quot;description&quot;: &quot;&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id='compartPanel']/tr[1]/td[@class='productNm']/descendant::input&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;Acount1&quot;, &quot;description&quot;: &quot;分仓账户1&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id='compartPanel']/tr[1]/td[@class='productNm']/descendant::input||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;volumn1&quot;, &quot;description&quot;: &quot;分仓券面1&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id='compartPanel']/tr[1]/td[@class='mnolNum']/descendant::input&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;Acount2&quot;, &quot;description&quot;: &quot;分仓账户2&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id='compartPanel']/tr[2]/td[@class='productNm']/descendant::input||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;volumn2&quot;, &quot;description&quot;: &quot;分仓券面2&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@id='compartPanel']/tr[2]/td[@class='mnolNum']/descendant::input&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;submit&quot;, &quot;description&quot;: &quot;提交&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@class='confirm_btn']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;clues&quot;, &quot;description&quot;: &quot;提示语&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='service-dialog-container']&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;confirm&quot;, &quot;description&quot;: &quot;确认&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//ctaf-cp-button[@ng-reflect-title='确认']/button&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;allocStatus&quot;, &quot;description&quot;: &quot;校验分仓状态&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@row-index='0']/div[@col-id='trdngIntntnSt']&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭交易分仓&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='交易分仓']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0022">{&quot;title&quot;: &quot;scrollContainer&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0023">{&quot;title&quot;: &quot;scroll&quot;, &quot;description&quot;: &quot;滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0024">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;分仓面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0025">{&quot;title&quot;: &quot;tip&quot;, &quot;description&quot;: &quot;tips&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='提示']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0006">
+		<scenerio type="str">报价信息查询</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;tab1&quot;, &quot;description&quot;: &quot;点击tab1&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='Tab1']&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;funcList&quot;, &quot;description&quot;: &quot;功能列表&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;CBTQuoteQuery&quot;, &quot;description&quot;: &quot;打开现券报价信息查询&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),'报价信息查询')]&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;title&quot;, &quot;description&quot;: &quot;报价查询面板标题&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='报价信息查询-债券市场']&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;embed&quot;, &quot;description&quot;: &quot;嵌入&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='嵌入']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;orderQuery&quot;, &quot;description&quot;: &quot;点击订单查询&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='订单查询']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;codeFilter&quot;, &quot;description&quot;: &quot;筛选区输入债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;refresh&quot;, &quot;description&quot;: &quot;刷新&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='refreshBtn']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;export&quot;, &quot;description&quot;: &quot;导出全部查询结果&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='exportQuoteBtn']&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;filter&quot;, &quot;description&quot;: &quot;筛选按钮&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='showFilter']&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;centralizedQt&quot;, &quot;description&quot;: &quot;集中报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='集中报价']&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;continuousQt&quot;, &quot;description&quot;: &quot;连续报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='连续报价']&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;dealed&quot;, &quot;description&quot;: &quot;成交&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='成交']&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;undealed&quot;, &quot;description&quot;: &quot;未成交&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='未成交']&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;订单查询面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;lrScroll&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='ag-body-horizontal-scroll-viewport']&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;startDate&quot;, &quot;description&quot;: &quot;查询起始日&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;endDate&quot;, &quot;description&quot;: &quot;查询结束日&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭我的订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='报价信息查询-债券市场']/parent::div//span[@title='关闭' and @class='pane-icon icon-close-restore']&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;scrollContainer&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;scroll&quot;, &quot;description&quot;: &quot;滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0022">{&quot;title&quot;: &quot;orderCd&quot;, &quot;description&quot;: &quot;订单编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='%s']&quot;}</step>
+			<step step_id="0023">{&quot;title&quot;: &quot;ordrCd&quot;, &quot;description&quot;: &quot;订单编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='订单编号']/following-sibling::span[@class='rfq_title_tip']&quot;}</step>
+			<step step_id="0024">{&quot;title&quot;: &quot;traTlCd&quot;, &quot;description&quot;: &quot;代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotaDetailInfo clear']/div[1]&quot;}</step>
+			<step step_id="0025">{&quot;title&quot;: &quot;bndsNm&quot;, &quot;description&quot;: &quot;名称&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotaDetailInfo clear']/div[2]&quot;}</step>
+			<step step_id="0026">{&quot;title&quot;: &quot;dir&quot;, &quot;description&quot;: &quot;本方方向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotaDetailInfo clear']/div[3]&quot;}</step>
+			<step step_id="0027">{&quot;title&quot;: &quot;ptyTrdrNm&quot;, &quot;description&quot;: &quot;本方交易员&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quotaDetailInfo clear']/div[4]&quot;}</step>
+			<step step_id="0028">{&quot;title&quot;: &quot;trdAcntCnShrtNm&quot;, &quot;description&quot;: &quot;本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='hostAccount']&quot;}</step>
+			<step step_id="0029">{&quot;title&quot;: &quot;num&quot;, &quot;description&quot;: &quot;订单编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='orderNm']&quot;}</step>
+			<step step_id="0030">{&quot;title&quot;: &quot;moreUI&quot;, &quot;description&quot;: &quot;扩展图标&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='openIcon']/i&quot;}</step>
+			<step step_id="0031">{&quot;title&quot;: &quot;clapseUI&quot;, &quot;description&quot;: &quot;收缩图标&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='closeIcon']/i&quot;}</step>
+			<step step_id="0032">{&quot;title&quot;: &quot;cpTrdAcntCnShrtNm&quot;, &quot;description&quot;: &quot;对手方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='itemTitle' and text()='对手方']/following-sibling::div&quot;}</step>
+			<step step_id="0033">{&quot;title&quot;: &quot;dlCd&quot;, &quot;description&quot;: &quot;成交编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='itemTitle' and text()='成交编号']/following-sibling::div&quot;}</step>
+			<step step_id="0034">{&quot;title&quot;: &quot;cpInstnCnShrtNm&quot;, &quot;description&quot;: &quot;对手方机构&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='对手方机构']/following-sibling::dd&quot;}</step>
+			<step step_id="0035">{&quot;title&quot;: &quot;cpTrdrNm&quot;, &quot;description&quot;: &quot;对手方交易员&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='对手方交易员']/following-sibling::dd&quot;}</step>
+			<step step_id="0036">{&quot;title&quot;: &quot;netPrc&quot;, &quot;description&quot;: &quot;净价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='净价']/following-sibling::dd&quot;}</step>
+			<step step_id="0037">{&quot;title&quot;: &quot;nmnlVol&quot;, &quot;description&quot;: &quot;券面(万)&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='券面(万)']/following-sibling::dd&quot;}</step>
+			<step step_id="0038">{&quot;title&quot;: &quot;yldToMrty&quot;, &quot;description&quot;: &quot;到期&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='到期(%)']/following-sibling::dd&quot;}</step>
+			<step step_id="0039">{&quot;title&quot;: &quot;dlAmnt&quot;, &quot;description&quot;: &quot;交易金额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='交易金额']/following-sibling::dd&quot;}</step>
+			<step step_id="0040">{&quot;title&quot;: &quot;stlmntDt&quot;, &quot;description&quot;: &quot;结算日&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='结算日']/following-sibling::dd&quot;}</step>
+			<step step_id="0041">{&quot;title&quot;: &quot;allPrice&quot;, &quot;description&quot;: &quot;全价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='全价']/following-sibling::dd&quot;}</step>
+			<step step_id="0042">{&quot;title&quot;: &quot;stlmntAmnt&quot;, &quot;description&quot;: &quot;结算金额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='结算金额']/following-sibling::dd&quot;}</step>
+			<step step_id="0043">{&quot;title&quot;: &quot;qtTp&quot;, &quot;description&quot;: &quot;报价类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='报价类型']/following-sibling::dd&quot;}</step>
+			<step step_id="0044">{&quot;title&quot;: &quot;statues&quot;, &quot;description&quot;: &quot;状态&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='状态']/following-sibling::dd&quot;}</step>
+			<step step_id="0045">{&quot;title&quot;: &quot;clrngMthd&quot;, &quot;description&quot;: &quot;清算类型&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='清算类型']/following-sibling::dd&quot;}</step>
+			<step step_id="0046">{&quot;title&quot;: &quot;dlTm&quot;, &quot;description&quot;: &quot;成交时间&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='成交时间']/following-sibling::dd&quot;}</step>
+			<step step_id="0047">{&quot;title&quot;: &quot;stlmntSpdNm&quot;, &quot;description&quot;: &quot;清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='清算速度']/following-sibling::dd&quot;}</step>
+			<step step_id="0048">{&quot;title&quot;: &quot;exrcsYld&quot;, &quot;description&quot;: &quot;行权&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//dt[@class='fl detail_tip' and text()='行权(%)']/following-sibling::dd&quot;}</step>
+			<step step_id="0049">{&quot;title&quot;: &quot;closePrePanel&quot;, &quot;description&quot;: &quot;关闭概览窗口&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='quoteDlDtSideBox']/div/div[@class='close_panel']&quot;}</step>
+			<step step_id="0050">{&quot;title&quot;: &quot;downloadDeal&quot;, &quot;description&quot;: &quot;下载成交单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='rfq_deal_detail_box']/descendant::div[@class='exportDealBtn fr']&quot;}</step>
+			<step step_id="0051">{&quot;title&quot;: &quot;traderFilter&quot;, &quot;description&quot;: &quot;交易员筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='本方交易员']/following-sibling::div[@class='fl']//input||//li[@title='%s']&quot;}</step>
+			<step step_id="0052">{&quot;title&quot;: &quot;filter&quot;, &quot;description&quot;: &quot;筛选按钮&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@title='筛选面板' and @class='showFilter']&quot;}</step>
+			<step step_id="0053">{&quot;title&quot;: &quot;confirm&quot;, &quot;description&quot;: &quot;确认&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='ope_btn']/button[text()='确认']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0007">
+		<scenerio type="str">成交查询</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;funcList&quot;, &quot;description&quot;: &quot;功能列表&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;CBTDealQuery&quot;, &quot;description&quot;: &quot;现券成交查询&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),'成交查询')]&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;title&quot;, &quot;description&quot;: &quot;成交查询面板标题&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='成交查询']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;embed&quot;, &quot;description&quot;: &quot;嵌入&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='嵌入']&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;dealDetail&quot;, &quot;description&quot;: &quot;成交明细&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='现券买卖-成交明细']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;preDealIntention&quot;, &quot;description&quot;: &quot;上市前成交意向&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='上市前交易意向']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;xbondFilter&quot;, &quot;description&quot;: &quot;X-bond筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='X-Bond']&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;filterDir&quot;, &quot;description&quot;: &quot;方向筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='%s']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;codeFilter&quot;, &quot;description&quot;: &quot;筛选区输入债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']||//li[contains(@ng-reflect-title,'%s')]&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;refresh&quot;, &quot;description&quot;: &quot;刷新&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='refreshBtn']&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;export&quot;, &quot;description&quot;: &quot;导出全部查询结果&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='exportQuoteBtn']&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;filter&quot;, &quot;description&quot;: &quot;筛选按钮&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='showFilter']&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;成交查询面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;lrScroll&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='ag-body-horizontal-scroll-viewport']&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;unconfirmedParty&quot;, &quot;description&quot;: &quot;本方未确认&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='本方未确认']&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;unconfirmedCounter&quot;, &quot;description&quot;: &quot;对手方未确认&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='对手方未确认']&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;onshore&quot;, &quot;description&quot;: &quot;做市成交&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='做市成交']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;offshore&quot;, &quot;description&quot;: &quot;非做市成交&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='非做市成交']&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;traderFilter&quot;, &quot;description&quot;: &quot;筛选区输入本方交易员&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='本方交易员']||//input[@placeholder='本方交易员']/following-sibling::div/ul/li[2]&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;tradeRecordFilter&quot;, &quot;description&quot;: &quot;筛选区输入交易记录编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='交易记录编号']||//input[@placeholder='交易记录编号']/following-sibling::div/ul/li[2]&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭成交查询面板&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='成交查询']/parent::div//span[@title='关闭' and @class='pane-icon icon-close-restore']&quot;}</step>
+			<step step_id="0022">{&quot;title&quot;: &quot;scrollContainer&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0023">{&quot;title&quot;: &quot;scroll&quot;, &quot;description&quot;: &quot;滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0024">{&quot;title&quot;: &quot;dealCd&quot;, &quot;description&quot;: &quot;成交编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='dlCd' and text()='%s']&quot;}</step>
+			<step step_id="0025">{&quot;title&quot;: &quot;preCheck&quot;, &quot;description&quot;: &quot;预览检查点&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='ui-dialog-title' and text()='预览']&quot;}</step>
+			<step step_id="0026">{&quot;title&quot;: &quot;closePre&quot;, &quot;description&quot;: &quot;关闭预览&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='ui-dialog-title' and text()='预览']/following-sibling::a//img&quot;}</step>
+			<step step_id="0027">{&quot;title&quot;: &quot;codeInput&quot;, &quot;description&quot;: &quot;输入订单编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[text()='报价/订单编号']/following-sibling::div//input&quot;}</step>
+			<step step_id="0028">{&quot;title&quot;: &quot;orderCd&quot;, &quot;description&quot;: &quot;匹配订单编号&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0029">{&quot;title&quot;: &quot;confirm&quot;, &quot;description&quot;: &quot;确认&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='确认']&quot;}</step>
+			<step step_id="0030">{&quot;title&quot;: &quot;download&quot;, &quot;description&quot;: &quot;下载成交单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@ng-reflect-klass='exportPdf']&quot;}</step>
+			<step step_id="0031">{&quot;title&quot;: &quot;selectAll&quot;, &quot;description&quot;: &quot;全选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@ref='cbSelectAll' and @class='ag-header-select-all']/span[2]&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0008">
+		<scenerio type="str">综合报价</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;functionList&quot;, &quot;description&quot;: &quot;综合报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;consolidatedQt&quot;, &quot;description&quot;: &quot;综合报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),'综合报价')]&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;title&quot;, &quot;description&quot;: &quot;放大面板&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='现券买卖-综合报价']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;optimalQt&quot;, &quot;description&quot;: &quot;最优报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@title='最优报价']&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;qtType&quot;, &quot;description&quot;: &quot;X-bond报价方式&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'X-Bond')]&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;codeFilter&quot;, &quot;description&quot;: &quot;代码/名称筛选&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='代码/名称']/following-sibling::ctaf-cp-autocomplete/descendant::input||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;最优报价查询面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;scrollContainer&quot;, &quot;description&quot;: &quot;左右滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;scroll&quot;, &quot;description&quot;: &quot;滚动条&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;bondcode&quot;, &quot;description&quot;: &quot;债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@title='%s' and @col-id='bcd']&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;filterXbond&quot;, &quot;description&quot;: &quot;筛选X-Bond&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//ul[@class='choiceBtn']/li[text()='X-Bond']&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;rate&quot;, &quot;description&quot;: &quot;双击价格&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@title='%s']/span/i&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;checkPointOne&quot;, &quot;description&quot;: &quot;检查是否打开小白屏&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='littleBut']/button[1]/span&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;inputParty&quot;, &quot;description&quot;: &quot;输入本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;本方\&quot;)]/following-sibling::input[1]&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;selectParty&quot;, &quot;description&quot;: &quot;匹配本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//label[contains(text(),\&quot;本方\&quot;)]/following-sibling::div[1]/div[1]/ul/li[2]&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;operationBtn&quot;, &quot;description&quot;: &quot;操作订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='%s']&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;submitBtn&quot;, &quot;description&quot;: &quot;提交订单&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[text()='提交']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;submitSuccess&quot;, &quot;description&quot;: &quot;检查是够提交成功&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@class='successTip']&quot;}</step>
+			<step step_id="0019">{&quot;title&quot;: &quot;closeWidget&quot;, &quot;description&quot;: &quot;关闭单合约窗口&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//header[text()='单券/合约']/parent::span/following-sibling::a/span/img&quot;}</step>
+			<step step_id="0020">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭综合报价窗口&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='现券买卖-综合报价']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0021">{&quot;title&quot;: &quot;speedNm&quot;, &quot;description&quot;: &quot;清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'+%s')]&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0009">
+		<scenerio type="str">活跃券报价</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;title&quot;: &quot;qtType&quot;, &quot;description&quot;: &quot;X-bond报价方式&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'X-Bond')]&quot;}</step>
+			<step step_id="0002">{&quot;title&quot;: &quot;speedNm&quot;, &quot;description&quot;: &quot;清算速度&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'+%s')]&quot;}</step>
+			<step step_id="0003">{&quot;title&quot;: &quot;codeFilter&quot;, &quot;description&quot;: &quot;筛选区输入债券代码&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='代码/名称']||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0004">{&quot;title&quot;: &quot;panel&quot;, &quot;description&quot;: &quot;活跃券报价面板&quot;, &quot;method&quot;: &quot;classname&quot;, &quot;value&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0005">{&quot;title&quot;: &quot;funcList&quot;, &quot;description&quot;: &quot;功能列表&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0006">{&quot;title&quot;: &quot;activeBondQt&quot;, &quot;description&quot;: &quot;打开活跃券报价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//li[contains(text(),'活跃券报价')]&quot;}</step>
+			<step step_id="0007">{&quot;title&quot;: &quot;title&quot;, &quot;description&quot;: &quot;活跃券报价标题&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[@class='title' and text()='活跃券报价']&quot;}</step>
+			<step step_id="0008">{&quot;title&quot;: &quot;onshore&quot;, &quot;description&quot;: &quot;做市点击&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='做市点击']&quot;}</step>
+			<step step_id="0009">{&quot;title&quot;: &quot;deepIcom&quot;, &quot;description&quot;: &quot;深度图标&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='deepNum']//div[@class='deepIcon']/div[1]&quot;}</step>
+			<step step_id="0010">{&quot;title&quot;: &quot;deepNum&quot;, &quot;description&quot;: &quot;深度值&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@col-id='deepNum']//div[@class='deepIcon']/div[2]&quot;}</step>
+			<step step_id="0011">{&quot;title&quot;: &quot;price&quot;, &quot;description&quot;: &quot;价格&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//div[@title='%s']&quot;}</step>
+			<step step_id="0012">{&quot;title&quot;: &quot;party&quot;, &quot;description&quot;: &quot;本方&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//input[@placeholder='本方']||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0013">{&quot;title&quot;: &quot;clrngMthd&quot;, &quot;description&quot;: &quot;清算方式&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'清算类型')]//span&quot;}</step>
+			<step step_id="0014">{&quot;title&quot;: &quot;netPrc&quot;, &quot;description&quot;: &quot;净价&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'净价')]//span&quot;}</step>
+			<step step_id="0015">{&quot;title&quot;: &quot;yldToMrty&quot;, &quot;description&quot;: &quot;到期收益率&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'到期')]//span&quot;}</step>
+			<step step_id="0016">{&quot;title&quot;: &quot;nmnlVol&quot;, &quot;description&quot;: &quot;可成交券面总额&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[contains(text(),'可成交券面')]//span&quot;}</step>
+			<step step_id="0017">{&quot;title&quot;: &quot;confirm&quot;, &quot;description&quot;: &quot;成交按钮&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//button[text()='成交']&quot;}</step>
+			<step step_id="0018">{&quot;title&quot;: &quot;closePanel&quot;, &quot;description&quot;: &quot;关闭面板&quot;, &quot;method&quot;: &quot;xpath&quot;, &quot;value&quot;: &quot;//span[text()='活跃券报价']/parent::div//span[@title='关闭']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0010">
+		<scenerio type="str">X-Bond成交</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;名称&quot;: &quot;xbondDeal&quot;, &quot;描述&quot;: &quot;X-Bond成交&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//*[@class='addIcon']||//*[@title='功能列表']||//li[contains(text(),'X-Bond成交')]||//span[@class='title' and text()='X-Bond成交']||//span[@title='嵌入']&quot;}</step>
+			<step step_id="0002">{&quot;名称&quot;: &quot;dealMarket&quot;, &quot;描述&quot;: &quot;成交行情&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@title='成交行情']&quot;}</step>
+			<step step_id="0003">{&quot;名称&quot;: &quot;onebyoneDeal&quot;, &quot;描述&quot;: &quot;逐笔成交&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@title='逐笔成交']&quot;}</step>
+			<step step_id="0004">{&quot;名称&quot;: &quot;centrlizedQtMarket&quot;, &quot;描述&quot;: &quot;集中报价成交行情&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@title='集中报价成交行情']&quot;}</step>
+			<step step_id="0005">{&quot;名称&quot;: &quot;codeFilter&quot;, &quot;描述&quot;: &quot;筛选区输入债券代码&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//input[@placeholder='代码/名称']||//input[@placeholder='代码/名称']/following-sibling::div/ul/li[2]&quot;}</step>
+			<step step_id="0006">{&quot;名称&quot;: &quot;centrlizedCondFilter&quot;, &quot;描述&quot;: &quot;集中报价代码/名称筛选&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[text()='代码/名称']/following-sibling::ctaf-cp-autocomplete/descendant::input&quot;}</step>
+			<step step_id="0007">{&quot;名称&quot;: &quot;panel&quot;, &quot;描述&quot;: &quot;X-Bond成交面板&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//div[@class='ag-center-cols-container']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0011">
+		<scenerio type="str">当日成交</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;名称&quot;: &quot;funcList&quot;, &quot;描述&quot;: &quot;功能列表&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0002">{&quot;名称&quot;: &quot;intradayDeal&quot;, &quot;描述&quot;: &quot;打开当日成交&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//li[contains(text(),'当日成交')]&quot;}</step>
+			<step step_id="0003">{&quot;名称&quot;: &quot;title&quot;, &quot;描述&quot;: &quot;当日成交标题&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@class='title' and text()='当日成交']&quot;}</step>
+			<step step_id="0004">{&quot;名称&quot;: &quot;qtType&quot;, &quot;描述&quot;: &quot;X-bond报价方式&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[contains(text(),'X-Bond')]&quot;}</step>
+			<step step_id="0005">{&quot;名称&quot;: &quot;panel&quot;, &quot;描述&quot;: &quot;当日成交面板&quot;, &quot;方法&quot;: &quot;classname&quot;, &quot;路径&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0006">{&quot;名称&quot;: &quot;closePanel&quot;, &quot;描述&quot;: &quot;关闭当日成交窗口&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[text()='当日成交']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0007">{&quot;名称&quot;: &quot;tab1&quot;, &quot;描述&quot;: &quot;点击tab1&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@title='Tab1']&quot;}</step>
+			<step step_id="0008">{&quot;名称&quot;: &quot;codeFilter&quot;, &quot;描述&quot;: &quot;筛选区输入债券代码&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//input[@placeholder='代码/名称']||//li[@ng-reflect-title='%s']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+	<scenario scenario_id="0012">
+		<scenerio type="str">报价监控</scenerio>
+		<steps>
+			<step step_id="0001">{&quot;名称&quot;: &quot;funcList&quot;, &quot;描述&quot;: &quot;功能列表&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//*[@title='功能列表']&quot;}</step>
+			<step step_id="0002">{&quot;名称&quot;: &quot;CBTMonitor&quot;, &quot;描述&quot;: &quot;现券报价监控&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//li[contains(text(),'报价监控')]&quot;}</step>
+			<step step_id="0003">{&quot;名称&quot;: &quot;title&quot;, &quot;描述&quot;: &quot;报价监控面板标题&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@class='title' and text()='现券买卖-报价监控']&quot;}</step>
+			<step step_id="0004">{&quot;名称&quot;: &quot;orderTab&quot;, &quot;描述&quot;: &quot;订单TAB&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@title='订单']&quot;}</step>
+			<step step_id="0005">{&quot;名称&quot;: &quot;filterOrderType&quot;, &quot;描述&quot;: &quot;订单类型筛选&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[contains(text(),'%s')]&quot;}</step>
+			<step step_id="0006">{&quot;名称&quot;: &quot;filterDir&quot;, &quot;描述&quot;: &quot;方向筛选&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[text()='%s']&quot;}</step>
+			<step step_id="0007">{&quot;名称&quot;: &quot;codeFilter&quot;, &quot;描述&quot;: &quot;筛选区输入债券代码&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//input[@placeholder='代码/名称']||//li[@ng-reflect-title='%s']&quot;}</step>
+			<step step_id="0008">{&quot;名称&quot;: &quot;filter&quot;, &quot;描述&quot;: &quot;筛选按钮&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//div[@class='showFilter']&quot;}</step>
+			<step step_id="0009">{&quot;名称&quot;: &quot;panel&quot;, &quot;描述&quot;: &quot;成交查询面板&quot;, &quot;方法&quot;: &quot;classname&quot;, &quot;路径&quot;: &quot;ag-center-cols-container&quot;}</step>
+			<step step_id="0010">{&quot;名称&quot;: &quot;traderFilter&quot;, &quot;描述&quot;: &quot;筛选区输入本方交易员&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//input[@placeholder='本方交易员']||//div[text()='%s']&quot;}</step>
+			<step step_id="0011">{&quot;名称&quot;: &quot;closePanel&quot;, &quot;描述&quot;: &quot;关闭成交查询面板&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[text()='现券买卖-报价监控']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0012">{&quot;名称&quot;: &quot;scrollContainer&quot;, &quot;描述&quot;: &quot;左右滚动条&quot;, &quot;方法&quot;: &quot;classname&quot;, &quot;路径&quot;: &quot;ag-body-horizontal-scroll-container&quot;}</step>
+			<step step_id="0013">{&quot;名称&quot;: &quot;scroll&quot;, &quot;描述&quot;: &quot;滚动条&quot;, &quot;方法&quot;: &quot;classname&quot;, &quot;路径&quot;: &quot;ag-body-horizontal-scroll-viewport&quot;}</step>
+			<step step_id="0014">{&quot;名称&quot;: &quot;closeOrderPanel&quot;, &quot;描述&quot;: &quot;关闭我的订单&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[text()='我的订单']/parent::div//span[@title='关闭']&quot;}</step>
+			<step step_id="0015">{&quot;名称&quot;: &quot;openMyOrder&quot;, &quot;描述&quot;: &quot;打开我的订单&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//li[contains(text(),\&quot;我的订单\&quot;)]&quot;}</step>
+			<step step_id="0016">{&quot;名称&quot;: &quot;unfoldMyOrder&quot;, &quot;描述&quot;: &quot;放大我的订单&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@class='title' and text()='我的订单']&quot;}</step>
+			<step step_id="0017">{&quot;名称&quot;: &quot;embedOrderPanel&quot;, &quot;描述&quot;: &quot;嵌入&quot;, &quot;方法&quot;: &quot;xpath&quot;, &quot;路径&quot;: &quot;//span[@title='嵌入']&quot;}</step>
+		</steps>
+		<comments>
+<![CDATA[A small but healthy company.]]>		</comments>
+	</scenario>
+</collection>

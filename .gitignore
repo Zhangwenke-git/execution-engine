@@ -1,0 +1,12 @@
+*.log
+.venv
+.vscode
+*.html
+*.pyc
+bat/*.bat
+.pytest_cache
+.idea
+!plugins
+*/JunitXml.xml
+test_*.py
+.nacos-data
